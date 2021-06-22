@@ -1,0 +1,28 @@
+[ignore]
+.*/node_modules/.*
+.*/__mocks__/.*
+.*/public/.*
+.*/src/redux/store.js
+.*/src/index.js
+.*/\.yarn/.*
+.*/\.git/.*
+.*/docs/.*
+.*/src/.*/Icons/index.js
+
+[include]
+
+[libs]
+flow-typed
+libs
+
+[lints]
+deprecated-utility=off
+
+[options]
+all=true
+# you can specify multiple module.system.node.resolve_dirname
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=src
+module.name_mapper.extension='svg' -> '<PROJECT_ROOT>/libs/svg-module.js.flow'
+
+[strict]
